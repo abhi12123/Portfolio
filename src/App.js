@@ -1,25 +1,58 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router,  Switch,  Route,  NavLink, useLocation } from "react-router-dom";
+import Contact from './components/Contact'
+import Home from './components/Home'
+import Skills from './components/Skills'
+import Works from './components/Works'
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  constructor(props){
+    super(props)
+    this.activeStyle = {
+      fontWeight: "bold", 
+      backgroundColor: "black" ,
+      color: "white",
+      borderRadius: "2rem",
+      padding:"10px 20px"
+    }
+  }
+  render() {
+    return (
+      <Router>
+      <div className="App">
+      <nav>
+          <ul>
+            <li>
+              <NavLink activeStyle={this.activeStyle} exact to="/"><button name="Home">Home</button></NavLink>
+            </li>
+            <li>
+              <NavLink activeStyle={this.activeStyle} to="/Works"><button name="Works" >Works</button></NavLink>
+            </li>
+            <li>
+              <NavLink activeStyle={this.activeStyle} to="/Skills"><button name="Skills" >Skills</button></NavLink>
+            </li>
+            <li>
+              <NavLink activeStyle={this.activeStyle} to="/Contact"><button name="Contact" >Contact</button></NavLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <Switch>
+          <Route exact path="/Works">
+            <Works />
+          </Route>
+          <Route exact path="/Skills">
+            <Skills />
+          </Route>
+          <Route exact path="/Contact">
+            <Contact />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+    </Router>
+    )
+  }
 }
-
-export default App;
