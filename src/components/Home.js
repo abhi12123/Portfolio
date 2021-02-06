@@ -24,7 +24,7 @@ export default function Home() {
             </div>
             <div className="intro">
                 <h1>A front end developer who is passionate about designing and implementing creative beautiful products</h1>
-                <button onClick={() => {window.location.href='https://drive.google.com/file/d/1TWEWFLI8YX402P_HXAQNmQTpzZw1xqov/view?usp=sharing'}}><i class="far fa-file fa-lg"></i> View my Resume</button>
+                <button onClick={() => {window.location.href='https://drive.google.com/file/d/1mShJY8L7OVG-kEwQnPfvce6dtlN0MVAn/view?usp=sharing'}}><i class="far fa-file fa-lg"></i> View my Resume</button>
             </div>
         </div>
     )

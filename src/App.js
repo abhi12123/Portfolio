@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router,  Switch,  Route,  NavLink, useLocation } from "react-router-dom";
+import { HashRouter as Router,  Switch,  Route,  NavLink, useLocation } from "react-router-dom";
 import Contact from './components/Contact'
 import Home from './components/Home'
 import Skills from './components/Skills'

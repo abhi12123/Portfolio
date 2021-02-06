@@ -9,7 +9,7 @@ export default function Skills() {
             </div>
             <div>
                 <h4>Back-End</h4>
-                <p>NODEJS, EXPRESSJS, NODEJS, MYSQL</p>
+                <p>NODEJS, EXPRESSJS, MYSQL</p>
             </div>
             <div>
                 <h4>Programming Languages familiar with</h4>
